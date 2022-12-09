@@ -8,6 +8,8 @@ import gulp from "gulp"
 import sass from "sass"
 import gulpsass from "gulp-sass"
 import cssnano from "gulp-cssnano"
+// webserver
+import webserver from "gulp-webserver"
 const scss = gulpsass(sass)
 
 
@@ -32,10 +34,19 @@ gulp.task("image", function () {
     .pipe(imagemin())
     .pipe(gulp.dest("app/image"));
 });
+gulp.task("webserver", () => {
+  return gulp.src("app").pipe(
+    webserver({
+      port: 3000,
+      livereload: true,
+      open: true,
+    })
+  );
+});
 gulp.task("watch", function () {
   gulp.watch("src/scss/*.scss", gulp.series("sass"));
   gulp.watch("src/js/*.js", gulp.series("js"));
 
 });
 
-gulp.task("default", gulp.series("image","watch"));
+gulp.task("default", gulp.series("image", "webserver", "watch"));
