@@ -16,10 +16,11 @@ a {
   color: black;
 }
 .wrappe {
+  flex: 1;
   margin-left: 57px;
   margin-right: 57px;
 }
-main{
+main {
   overflow-x: hidden;
 }
 // header
@@ -30,7 +31,8 @@ main{
   justify-content: space-between;
   align-items: center;
 }
-.close,.icon_menu{
+.close,
+.icon_menu {
   display: none;
 }
 .header__logo {
@@ -39,7 +41,6 @@ main{
   font-size: 5.1rem;
 }
 .header__menu {
- 
   ul {
     display: flex;
     li {
@@ -64,7 +65,7 @@ main{
 #banner {
   height: 764px;
   background-image: url("../../app/image/banner.png");
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -356,7 +357,7 @@ footer {
   }
 }
 @media only screen and (max-width: 1231px) {
-  .content{
+  .content {
     margin-top: 80px;
   }
 }
@@ -467,6 +468,27 @@ footer {
           line-height: 3.6rem;
         }
       }
+    }
+  }
+  .content--concat {
+    padding: 0px 0 0px 20px;
+    .phone {
+      padding: 10px 0;
+      .icon--phone {
+        height: 35px;
+        width: 35px;
+        line-height: 3.5rem;
+
+        font-size: 2.3rem;
+      }
+    }
+    address {
+      padding: 0;
+    }
+    .contact__social {
+          margin-bottom: 10px;
+         margin-right: 5px;
+         margin-left: -5px;
     }
   }
 }
@@ -678,6 +700,12 @@ footer {
       }
     }
   }
+  .content--concat {
+    h2{
+      font-size: 3.1rem;
+      line-height: 4rem;
+    }
+  } 
 }
 @media only screen and (max-width: 800px) {
   .information {
@@ -727,7 +755,7 @@ footer {
     }
   }
   .information {
-    margin-bottom: 20px;
+    margin: 20px -13px;
     .content--information {
       margin-top: 130px;
       .information_item {
@@ -758,49 +786,48 @@ footer {
 }
 
 @media only screen and (max-width: 744px) {
-  
-   #header {
-  .header__menu{
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    right: 0;
-    background-color: rgba(194, 185, 185,0.5);
-  ul{
-    display: flex;
-    flex-direction: column;
-    z-index: 14;
-    position: fixed;
-    background: aliceblue;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    div{
-      i{
-      margin-left: 10px;
+  #header {
+    .header__menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      right: 0;
+      background-color: rgba(194, 185, 185, 0.5);
+      ul {
+        display: flex;
+        flex-direction: column;
+        z-index: 14;
+        position: fixed;
+        background: aliceblue;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        div {
+          i {
+            margin-left: 10px;
+          }
+        }
+        li {
+          height: auto;
+          line-height: unset;
+          a {
+            padding: 10px 100px 10px 35px;
+          }
+        }
       }
     }
-    li{
-      height: auto;
-      line-height: unset;
-      a{
-       padding: 10px 100px 10px 35px;
-      }
+    .close,
+    .icon_menu {
+      display: block;
     }
   }
-}
-  .close,.icon_menu {
+
+  #menu:checked ~ .header__menu {
     display: block;
   }
-}
-
-#menu:checked ~ .header__menu {
-  display: block;
-}
- 
 }
 @media only screen and (max-width: 620px) {
   #banner {
@@ -827,14 +854,16 @@ footer {
   }
   .information {
     flex-direction: column;
+    margin: 20px 0px;
     .content--information {
       width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
   }
 }
 
 @media only screen and (max-width: 539px) {
-  
   .content {
     margin-top: 220px;
   }
@@ -892,14 +921,13 @@ footer {
   }
 }
 @media only screen and (max-width: 449px) {
-  .content{
-      margin-top: 240px;
-    }
+  .content {
+    margin-top: 240px;
+  }
   #banner {
     .news {
       bottom: -40%;
     }
-    
   }
   #banner .wrappe {
     margin-right: 13px;
@@ -915,8 +943,8 @@ footer {
 }
 .information {
   .content--information {
-    margin-left: 0;
-    margin-right: 0;
+       margin-left: 13px;
+    margin-right: 13px;
     .information_item {
       h3 {
         text-align: center !important;
@@ -926,7 +954,6 @@ footer {
 }
 .image__theRegion {
   .theregion_left {
-    padding: 20px;
     div {
       h2 {
         font-size: 3rem;
@@ -952,20 +979,19 @@ footer {
   }
 }
 @media only screen and (max-width: 414px) {
-.content{
-  margin-top: 300px;
-}
+  .content {
+    margin-top: 300px;
+  }
 }
 @media only screen and (max-width: 306px) {
-.content{
-  margin-top: 350px;
-}
+  .content {
+    margin-top: 350px;
+  }
 }
 @media only screen and (max-width: 370px) {
   #banner {
-    .news{
+    .news {
       top: 0;
     }
   }
 }
-
