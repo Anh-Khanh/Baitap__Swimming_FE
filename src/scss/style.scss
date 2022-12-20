@@ -165,7 +165,6 @@ section {
     img {
       width: 100%;
       height: 100%;
-    object-fit: fill;
       display: block;
     }
   }
@@ -426,7 +425,7 @@ footer {
       ul {
         li {
           line-height: 4.6rem;
-          font-size: 2rem;
+          font-size: 1.9rem;
         }
       }
     }
@@ -535,7 +534,7 @@ footer {
     }
   }
   .content {
-    margin-top: 0;
+    margin-top: 200px;
   }
   section {
     .content--left {
@@ -581,8 +580,8 @@ footer {
     }
   }
   .news {
-    position: static;
-    margin-top: 50px;
+    // position: static;
+    // margin-top: 50px;
     .news__item {
       h3 {
         font-size: 3.3rem;
@@ -666,7 +665,9 @@ footer {
       }
       ul {
         li {
-          font-size: 1.3rem;
+          display: flex;
+          align-items: center;
+          font-size: 1.4rem;
         }
       }
     }
@@ -694,7 +695,7 @@ footer {
     .content--left {
       div {
         h2 {
-          font-size: 2.4rem;
+          font-size: 3rem;
         }
         p {
           font-size: 1.5rem;
@@ -727,6 +728,7 @@ footer {
   }
   #banner {
     .news {
+      top: 175px;
       margin-top: 30px;
       flex-wrap: wrap;
       .news__item {
@@ -762,6 +764,19 @@ footer {
     }
   } 
 }
+@media only screen and (max-width: 878px) {
+
+  .content {
+    margin-top: 230px;
+  }
+}
+@media only screen and (max-width: 830px) {
+
+  .content {
+    margin-top: 300px;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .information {
     flex-direction: row;
@@ -887,12 +902,22 @@ footer {
     }
     .close,
     .icon_menu {
+      color: #007cc6;
       display: block;
     }
   }
 
   #menu:checked ~ .header__menu {
     display: block;
+  }
+
+  #banner {
+    .news {
+      position: static;
+    }
+  }
+  .content{
+    margin-top: 0;
   }
 }
 @media only screen and (max-width: 620px) {
