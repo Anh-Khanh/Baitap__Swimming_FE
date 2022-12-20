@@ -45,6 +45,7 @@ color: #4073de;
 .header__menu {
   ul {
     display: flex;
+    justify-content: flex-end;
     li {
       height: 128px;
       line-height: 128px;
@@ -65,10 +66,16 @@ color: #4073de;
 
 // banner
 #banner {
-  height: 764px;
-  background-image: url("../image/banner.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  .banner_image {
+      img {
+      width: 100%;
+      object-fit: contain;
+      }
+    }
+  // height: 764px;
+  // background-image: url("../image/banner.png");
+  // background-size: 100%;
+  // background-repeat: no-repeat;
   position: relative;
 }
 .news {
@@ -208,14 +215,13 @@ section {
   align-items: center;
   color: #fff;
   div {
-    margin: 0 40px;
+    padding: 57px;
     h2 {
       font-size: 5.1rem;
       font-weight: 600;
       line-height: 10rem;
     }
     ul {
-      margin-left: 4em;
       li {
         line-height: 5.6rem;
         font-size: 2.3rem;
@@ -268,7 +274,7 @@ section {
   width: 50%;
   margin: 0 13px;
   background: linear-gradient(#009ae1, #007cc6);
-  padding: 20px 72px;
+  padding: 57px;
   color: #fff;
   h2 {
     font-size: 5.1rem;
@@ -368,12 +374,13 @@ footer {
     }
   }
 }
-@media only screen and (max-width: 1231px) {
-  .content {
-    margin-top: 80px;
-  }
-}
+// @media only screen and (max-width: 1231px) {
+//   .content {
+//     margin-top: 80px;
+//   }
+// }
 @media only screen and (max-width: 1287px) {
+
   section {
     .content--left {
       div {
@@ -415,6 +422,7 @@ footer {
   }
   .content--event {
     div {
+      padding: 40px;
       ul {
         li {
           line-height: 4.6rem;
@@ -424,15 +432,20 @@ footer {
     }
   }
   .content--concat {
+    padding: 40px;
     .phone {
       font-size: 4.4rem;
     }
+  }
+  footer {
+    padding: 50px;
   }
 }
 
 @media only screen and (max-width: 1231px) {
   .news {
-    bottom: 0;
+    // position: static;
+    // margin-top: 50px;
     .news__item {
       h3 {
         font-size: 4rem;
@@ -470,7 +483,6 @@ footer {
   }
   .content--event {
     div {
-      margin: 0 20px;
       h2 {
         font-size: 4rem;
         line-height: 7rem;
@@ -483,7 +495,7 @@ footer {
     }
   }
   .content--concat {
-    padding: 0px 0 0px 20px;
+    padding: 40px;
     .phone {
       padding: 10px 0;
       .icon--phone {
@@ -506,6 +518,22 @@ footer {
 }
 
 @media only screen and (max-width: 1056px) {
+    #header {
+    height: 100px;
+    .header__logo {
+  a{
+    font-size: 4rem;  
+  } 
+    }
+    .header__menu {
+      ul {
+        li {
+          height: 100px;
+          line-height: 100px;
+        }
+      }
+    }
+  }
   .content {
     margin-top: 0;
   }
@@ -540,7 +568,6 @@ footer {
   }
   .content--event {
     div {
-      margin: 30px;
       h2 {
         font-size: 4.1rem;
         line-height: 8rem;
@@ -554,7 +581,8 @@ footer {
     }
   }
   .news {
-    bottom: 0;
+    position: static;
+    margin-top: 50px;
     .news__item {
       h3 {
         font-size: 3.3rem;
@@ -604,18 +632,34 @@ footer {
           font-size: 3.4rem;
         }
         button {
-          width: 150px;
-          padding: 10px 0;
-          font-size: 2rem;
+          width: 164px;
+          padding: 16px 0;
+          font-size: 1.6rem;
         }
       }
     }
   }
 }
 @media only screen and (max-width: 988px) {
+  #header {
+    height: 100px;
+    .header__logo {
+  a{
+    font-size: 4rem;  
+  } 
+    }
+    .header__menu {
+      ul {
+        li {
+          a{
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
   .content--event {
     div {
-      margin: 0 20px 0 30px;
       h2 {
         font-size: 3rem;
         line-height: 5rem;
@@ -632,7 +676,9 @@ footer {
   #header {
     height: 100px;
     .header__logo {
-      font-size: 4rem;
+  a{
+    font-size: 4rem;  
+  } 
     }
     .header__menu {
       ul {
@@ -679,17 +725,14 @@ footer {
       flex: unset;
     }
   }
-  .content {
-    margin-top: 280px;
-  }
   #banner {
     .news {
-      bottom: -36%;
+      margin-top: 30px;
       flex-wrap: wrap;
       .news__item {
         flex: none;
         width: 45%;
-        margin-bottom: 40px;
+        margin-top: 20px;
       }
     }
   }
@@ -706,7 +749,7 @@ footer {
           height: 67px;
           line-height: 67px;
           a {
-            padding: 0 10px;
+            padding: 0 8px;
           }
         }
       }
@@ -734,12 +777,23 @@ footer {
       }
     }
   }
+  .content--concat{
+    div{
+      .phone {
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 796px) {
+  .content-first{
+    flex-direction: column-reverse !important;
+  }
   section {
-    margin: 0;
+    margin: 50px 0px 0px 0px;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column-reverse;
     .content--left {
       width: 100%;
       margin: 0;
@@ -760,6 +814,10 @@ footer {
     }
     .content--image {
       width: 100%;
+      height: 300px;
+      margin-bottom: 20px;
+      margin-left: 0;
+      margin-right: 0;
       margin: 20px 0;
     }
   }
@@ -774,11 +832,11 @@ footer {
       }
     }
   }
+  
   .content--lesson {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .content--event {
-    padding: 20px;
     width: 100%;
     margin: 0;
   }
@@ -806,6 +864,7 @@ footer {
       ul {
         display: flex;
         flex-direction: column;
+        justify-content: start;
         z-index: 14;
         position: fixed;
         background: aliceblue;
@@ -839,25 +898,26 @@ footer {
 @media only screen and (max-width: 620px) {
   #banner {
     .news {
+      margin: 0;
       flex-wrap: wrap;
       width: 100%;
-      left: 0;
-      right: 0;
-      margin: 0;
       .news__item {
         flex: none;
         width: 100%;
-        margin: 0 0 40px 0;
+        margin-top: 40px;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
-  .content {
-    margin-top: 300px;
-  }
 }
 @media only screen and (max-width: 551px) {
-  #banner {
-    height: 700px;
+  #header {
+    .header__logo {
+      a {
+        font-size: 3rem;
+      }
+    }
   }
   .information {
     flex-direction: column;
@@ -871,12 +931,8 @@ footer {
 }
 
 @media only screen and (max-width: 539px) {
-  .content {
-    margin-top: 220px;
-  }
   .content--event {
     div {
-      margin: 15px;
       h2 {
         line-height: unset;
       }
@@ -929,16 +985,16 @@ footer {
   }
 }
 @media only screen and (max-width: 449px) {
-  .content {
-    margin-top: 320px;
-  }
-  #banner {
-    .news {
-      bottom: -50%;
-    }
-  }
   #banner .wrappe {
     margin-right: 13px;
+  }
+  #banner {
+    .news{
+      .news__item{
+        margin-left: 13px;
+        margin-left: 13px;
+      }
+    }
   }
   header .wrappe {
     margin-right: 20px;
@@ -981,26 +1037,4 @@ footer {
     }
   }
 }
-}
-
-@media only screen and (max-width: 414px) {
-  .content {
-    margin-top: 400px;
-  }
-  #banner {
-    .news{
-      bottom: -60%;
-    }
-  }
-}
-
-@media only screen and (max-width: 370px) {
-  .content {
-    margin-top: 430px;
-  }
-  #banner {
-    .news {
-      bottom:-69%;
-    }
-  }
 }

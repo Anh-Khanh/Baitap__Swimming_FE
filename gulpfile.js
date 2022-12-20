@@ -49,4 +49,4 @@ gulp.task("watch", function () {
 
 });
 
-gulp.task("default", gulp.series("image", "webserver", "watch"));
+gulp.task("default", gulp.series("image", "watch"));
