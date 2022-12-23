@@ -729,9 +729,12 @@ footer {
       top: 175px;
       margin-top: 30px;
       flex-wrap: wrap;
+      margin-left: 0;
+      margin-right: 0;
       .news__item {
         flex: none;
-        width: 45%;
+        width: calc(50% - 13px);
+        margin: 0 ;
         margin-top: 20px;
       }
     }
