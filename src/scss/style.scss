@@ -839,7 +839,7 @@ footer {
     }
   }
   .information {
-    margin: 20px -13px;
+    margin: 50px -13px;
     .content--information {
       margin-top: 130px;
       .information_item {
@@ -895,6 +895,8 @@ footer {
         }
         li {
           height: auto;
+          border-bottom: 1px solid #333;
+          box-shadow: 1px 1px 2px #333;
           line-height: unset;
           a {
             padding: 10px 100px 10px 35px;
@@ -904,6 +906,7 @@ footer {
     }
     .close,
     .icon_menu {
+      font-size: 4rem;
       color: #007cc6;
       display: block;
     }
