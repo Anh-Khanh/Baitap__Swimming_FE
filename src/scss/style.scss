@@ -36,11 +36,11 @@ main {
   display: none;
 }
 .header__logo {
- a{
-color: #4073de;
-  font-weight: 400;
-  font-size: 5.1rem;
- } 
+  a {
+    color: #4073de;
+    font-weight: 400;
+    font-size: 5.1rem;
+  }
 }
 .header__menu {
   ul {
@@ -67,11 +67,11 @@ color: #4073de;
 // banner
 #banner {
   .banner_image {
-      img {
+    img {
       width: 100%;
       object-fit: contain;
-      }
     }
+  }
   // height: 764px;
   // background-image: url("../image/banner.png");
   // background-size: 100%;
@@ -327,17 +327,21 @@ footer {
   padding: 70px;
   font-size: 2.3rem;
   line-height: 3.6rem;
-   line-height: 3.6rem;
+  line-height: 3.6rem;
   color: #585858;
   text-align: center;
 }
-.contact__social  {a{
-  color: #007cc6;
-}}
-.icon--phone {a{
-  color: #007cc6;
-
-}}
+.contact__social {
+  a {
+    display: block;
+    color: #007cc6;
+  }
+}
+.icon--phone {
+  a {
+    color: #007cc6;
+  }
+}
 //  repon
 @media only screen and (max-width: 1377px) {
   section {
@@ -378,7 +382,6 @@ footer {
 //   }
 // }
 @media only screen and (max-width: 1287px) {
-
   section {
     .content--left {
       div {
@@ -508,20 +511,20 @@ footer {
       padding: 0;
     }
     .contact__social {
-          margin-bottom: 10px;
-         margin-right: 5px;
-         margin-left: -5px;
+      margin-bottom: 10px;
+      margin-right: 5px;
+      margin-left: -5px;
     }
   }
 }
 
 @media only screen and (max-width: 1056px) {
-    #header {
+  #header {
     height: 100px;
     .header__logo {
-  a{
-    font-size: 4rem;  
-  } 
+      a {
+        font-size: 4rem;
+      }
     }
     .header__menu {
       ul {
@@ -642,14 +645,14 @@ footer {
   #header {
     height: 100px;
     .header__logo {
-  a{
-    font-size: 4rem;  
-  } 
+      a {
+        font-size: 4rem;
+      }
     }
     .header__menu {
       ul {
         li {
-          a{
+          a {
             padding: 0 20px;
           }
         }
@@ -676,9 +679,9 @@ footer {
   #header {
     height: 100px;
     .header__logo {
-  a{
-    font-size: 4rem;  
-  } 
+      a {
+        font-size: 4rem;
+      }
     }
     .header__menu {
       ul {
@@ -734,7 +737,7 @@ footer {
       .news__item {
         flex: none;
         width: calc(50% - 13px);
-        margin: 0 ;
+        margin: 0;
         margin-top: 20px;
       }
     }
@@ -759,20 +762,18 @@ footer {
     }
   }
   .content--concat {
-    h2{
+    h2 {
       font-size: 3.1rem;
       line-height: 4rem;
     }
-  } 
+  }
 }
 @media only screen and (max-width: 878px) {
-
   .content {
     margin-top: 230px;
   }
 }
 @media only screen and (max-width: 830px) {
-
   .content {
     margin-top: 300px;
   }
@@ -793,8 +794,8 @@ footer {
       }
     }
   }
-  .content--concat{
-    div{
+  .content--concat {
+    div {
       .phone {
         font-size: 2.3rem;
         line-height: 2.3rem;
@@ -803,7 +804,7 @@ footer {
   }
 }
 @media only screen and (max-width: 796px) {
-  .content-first{
+  .content-first {
     flex-direction: column-reverse !important;
   }
   section {
@@ -849,7 +850,7 @@ footer {
       }
     }
   }
-  
+
   .content--lesson {
     flex-direction: column;
   }
@@ -921,7 +922,7 @@ footer {
       position: static;
     }
   }
-  .content{
+  .content {
     margin-top: 0;
   }
 }
@@ -1019,8 +1020,8 @@ footer {
     margin-right: 13px;
   }
   #banner {
-    .news{
-      .news__item{
+    .news {
+      .news__item {
         margin-left: 13px;
         margin-left: 13px;
       }
@@ -1035,36 +1036,36 @@ footer {
     margin-left: -13px;
   }
 
-.information {
-  .content--information {
-       margin-left: 13px;
-    margin-right: 13px;
+  .information {
+    .content--information {
+      margin-left: 13px;
+      margin-right: 13px;
+    }
   }
-}
-.image__theRegion {
-  .theregion_left {
+  .image__theRegion {
+    .theregion_left {
+      div {
+        h2 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+          text-align: justify;
+        }
+      }
+    }
+  }
+  .content--event {
     div {
       h2 {
         font-size: 3rem;
       }
-      p {
-        font-size: 1.5rem;
-        text-align: justify;
+      ul {
+        li {
+          line-height: 2rem;
+          font-size: 1.4rem;
+        }
       }
     }
   }
-}
-.content--event {
-  div {
-    h2 {
-      font-size: 3rem;
-    }
-    ul {
-      li {
-        line-height: 2rem;
-        font-size: 1.4rem;
-      }
-    }
-  }
-}
 }
